@@ -1,0 +1,56 @@
+@media print {
+  @page {
+    size: landscape;
+    margin: 10mm;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  #roster-print-area,
+  #roster-print-area * {
+    visibility: visible !important;
+  }
+
+  #roster-print-area {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    min-width: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    color: #111 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  #roster-print-area .overflow-x-auto,
+  #roster-print-area .min-w-\[700px\] {
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  #roster-print-area * {
+    color: #111 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #roster-print-area .grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  }
+
+  #roster-print-area .cursor-pointer {
+    cursor: default !important;
+  }
+
+  .roster-print-heading {
+    display: block !important;
+  }
+
+  .roster-no-print {
+    display: none !important;
+  }
+}
